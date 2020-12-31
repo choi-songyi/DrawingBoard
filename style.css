@@ -92,7 +92,6 @@ li {
 .content-container {
   height: 150px;
   justify-content: center;
-  overflow: hidden;
 }
 .place-modal-btn {
   border: none;
