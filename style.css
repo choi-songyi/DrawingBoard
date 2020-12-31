@@ -104,15 +104,27 @@ li {
 /* right */
 #img-list {
   height: 7200px;
-  transform: translateY(-3200px);
+  transform: translateY(-800px);
 }
 #img-list li {
   text-align: center;
-  height: 800px;
-}
-.big-img {
   width: 100%;
   height: 800px;
+}
+#img-list li img {
+  width: 100%;
+  height: 800px;
+}
+.img-fade {
+  animation: fadeIn 0.7s linear;
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 .bg {
   background-image: url(./imges/bg.PNG);

@@ -74,5 +74,32 @@ infoList.addEventListener('transitionend',()=>{
 });
 
 // big-img change
+const bigImgList = document.querySelector('#img-list');
+const bigImg = document.querySelectorAll('.big-img');
+const img = document.querySelectorAll('img');
+
+let bigImgCounter = 1;
+
+upBtn.addEventListener('click',()=>{
+    bigImgCounter--;
+    bigImgList.classList.add('img-fade');
+    setTimeout(()=>{bigImgList.classList.remove('img-fade')},700)
+    bigImgList.style.transform = 'translateY('+bigImgCounter*(-800)+'px)';
+    if(bigImg[bigImgCounter].id ==='big-img-last-clone'){
+        bigImgCounter=9;
+        bigImgList.style.transform = 'translateY('+bigImgCounter*(-800)+'px)';
+    }
+});
+downBtn.addEventListener('click',()=>{
+    bigImgCounter++;
+    bigImgList.classList.add('img-fade');
+    setTimeout(()=>{bigImgList.classList.remove('img-fade')},700)
+    bigImgList.style.transform = 'translateY('+bigImgCounter*(-800)+'px)';
+    if(bigImg[bigImgCounter].id ==='big-img-first-clone'){
+        bigImgCounter=1;
+        bigImgList.style.transform = 'translateY('+bigImgCounter*(-800)+'px)';
+    }
+});
+
 // main-modal
 // content-modal
