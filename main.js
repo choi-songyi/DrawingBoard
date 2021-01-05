@@ -139,4 +139,17 @@ closeBtn.forEach(item=>{
     item.addEventListener('click',clickCloseBtn);
 })
 
-// content-modal
+//main(landing page)-modal
+
+const landingPage = document.querySelector('#main-modal');
+const landingPageBtn = document.querySelector('#main-btn');
+
+function loadFirstPage(e){
+    landingPage.style.display = 'block';
+}
+window.addEventListener('load',loadFirstPage);
+
+landingPageBtn.addEventListener('click',()=>{
+    landingPage.classList.add('bg-fade-in')
+    setTimeout(()=>{landingPage.style.display = 'none'},1000)
+})

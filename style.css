@@ -15,7 +15,33 @@ li {
 }
 /* main-modal */
 #main-modal {
-  display: none;
+  position: absolute;
+  top: 0;
+  z-index: 10;
+  width: 100%;
+  height: 800px;
+  background-color: #fff;
+  color: var(--maincolor);
+  font-size: 3rem;
+  text-align: center;
+  line-height: 800px;
+}
+#main-btn {
+  border: none;
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  width: 100px;
+  height: 50px;
+  background-color: var(--maincolor);
+  color: #fff;
+  outline-style: none;
+  font-size: 1.5rem;
+  border-radius: 10px;
+}
+#main-btn:hover {
+  background-color: var(--pointcolor);
+  cursor: pointer;
 }
 /* slide-btn */
 #slide-btn {
@@ -131,11 +157,11 @@ li {
   background-repeat: none;
   position: fixed;
   width: 50%;
-  height: 100vh;
-  z-index: 10;
+  height: 800px;
+  z-index: 5;
 }
 .bg-fade-in {
-  animation: bg-fade-in 0.7s cubic-bezier(0.665, 0, 0.325, 0.985);
+  animation: bg-fade-in 1s cubic-bezier(0.665, 0, 0.325, 0.985);
 }
 @keyframes bg-fade-in {
   from {
@@ -146,7 +172,7 @@ li {
   }
 }
 .bg-fade-out {
-  animation: bg-fade-out 0.7s cubic-bezier(0.665, 0, 0.325, 0.985);
+  animation: bg-fade-out 1s cubic-bezier(0.665, 0, 0.325, 0.985);
 }
 @keyframes bg-fade-out {
   from {
