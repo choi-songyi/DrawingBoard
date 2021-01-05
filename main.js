@@ -102,4 +102,41 @@ downBtn.addEventListener('click',()=>{
 });
 
 // main-modal
+const modalList = document.querySelectorAll('.modal');
+const moreBtn = document.querySelectorAll('.place-modal-btn');
+const backGroundImg = document.querySelector('.bg');
+const closeBtn = document.querySelectorAll('.close-btn');
+
+function clickMoreBtn(e){
+    let targetNumber = e.target.getAttribute('data-number');
+    modalList[targetNumber-1].style.transform = 'translateX(0%)';
+    modalList[targetNumber-1].style.transition = 'all 0.9s cubic-bezier(0.665, 0.000, 0.325, 0.985)';
+    backGroundImg.classList.remove('bg-fade-out');
+    backGroundImg.classList.add('bg-fade-in');
+    backGroundImg.style.transform='scale(1.5)';
+    backGroundImg.style.transition='all 0.5s ease-in-out'
+    backGroundImg.style.opacity='0';
+    
+}
+
+moreBtn.forEach(item=>{
+    item.addEventListener('click',clickMoreBtn);
+})
+
+function clickCloseBtn(e){
+    let targetNumber = e.target.getAttribute('data-number');
+    backGroundImg.classList.remove('bg-fade-in');
+    modalList[targetNumber-1].style.transform = 'translateX(-100%)';
+    modalList[targetNumber-1].style.transition = 'all 0.9s cubic-bezier(0.665, 0.000, 0.325, 0.985)';
+    backGroundImg.classList.add('bg-fade-out');
+    backGroundImg.style.transform='scale(1)';
+    backGroundImg.style.transition='all 0.5s ease-in-out'
+    backGroundImg.style.display='block';
+    backGroundImg.style.opacity='1';
+}
+
+closeBtn.forEach(item=>{
+    item.addEventListener('click',clickCloseBtn);
+})
+
 // content-modal
