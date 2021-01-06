@@ -199,10 +199,20 @@ li {
     transform: translateX(-100%);
     z-index: 100;
   }
+  .modal h1 {
+    padding: 10px;
+    margin-left: 10px;
+  }
+  .modal p {
+    padding: 10px;
+    line-height: 30px;
+    margin-left: 10px;
+  }
   .close-btn {
     border: none;
     background-color: var(--maincolor);
     padding: 5px;
+    margin: 20px;
     outline-style: none;
   }
   .close-btn:hover {
