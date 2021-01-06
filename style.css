@@ -24,13 +24,13 @@ li {
   color: var(--maincolor);
   font-size: 3rem;
   text-align: center;
-  line-height: 800px;
+  line-height: 700px;
 }
 #main-btn {
   border: none;
   position: absolute;
-  top: 60%;
-  left: 50%;
+  top: 55%;
+  left: 45%;
   width: 100px;
   height: 50px;
   background-color: var(--maincolor);
@@ -69,18 +69,19 @@ li {
 /* container-section*/
 #container {
   display: flex;
+  height: 800px;
 }
 
 #section-left {
   width: 50%;
-  height: 100vh;
+  height: 800px;
   display: flex;
   align-items: center;
   overflow: hidden;
 }
 #section-right {
   width: 50%;
-  height: 100vh;
+  height: 800px;
   display: flex;
   flex-direction: column;
   overflow: hidden;
@@ -118,13 +119,17 @@ li {
 .content-container {
   height: 150px;
   justify-content: center;
+  overflow: hidden;
 }
 .place-modal-btn {
   border: none;
   padding: 5px;
+  margin-top: 10px;
   outline-style: none;
+  background-color: var(--maincolor);
 }
 .place-modal-btn:hover {
+  background-color: var(--pointcolor);
   cursor: pointer;
 }
 /* right */
@@ -195,7 +200,7 @@ li {
 }
 .close-btn {
   border: none;
-  background-color: var(--lightcolor);
+  background-color: var(--maincolor);
   padding: 5px;
   outline-style: none;
 }
